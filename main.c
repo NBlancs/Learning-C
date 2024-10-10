@@ -218,6 +218,23 @@ int main(){
     printf("%d", revnum);
 
     // FOR LOOPS
+    
+    for (int i = 0; i < 15; i++){
+        printf("%d\n", i);
+    }
+
+        // nested for loops
+
+        for (int i = 0; i < 5; i++){
+            printf("Outer Loop: %d\n", i);
+            for (int j = 0; j < 5; j++){
+                printf("  Inner Loop: %d\n", j);
+            }
+        }
+
+        // break and continue
+            // break -> used to jump out of a loop
+            // continue -> statement breaks one iteration (in the loop)
 
     return 0;
 }
