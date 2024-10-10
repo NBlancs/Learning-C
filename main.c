@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 
 int main(){
     printf("Hello World Again\n\n");
@@ -303,6 +304,33 @@ int main(){
         }
 
     // STRINGS 
+
+        // C doesnt have a string type instead you must use char type to create an array of characters to make a string
+
+    char fullName[] = "Noel Blancos";
+    printf("%s\n", fullName);
+
+    int length1 = sizeof(fullName) / sizeof(fullName[0]);
+
+        // loop through a string 
+
+    for (int i = 0; i < length1; i++ ){
+        printf("%c\n", fullName[i]);
+    }
+
+        // get the length of a string
+
+    char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    printf("%d\n", strlen(alphabet));
+
+        // concatenate strings
+
+        char str1[20] = "Hello";
+        char str2[] = " Kalibutan";
+
+        strcat (str1, str2);
+
+        printf("%s\n", str1);
 
     return 0;
 }
