@@ -236,6 +236,74 @@ int main(){
             // break -> used to jump out of a loop
             // continue -> statement breaks one iteration (in the loop)
 
+
+    // ARRAYS
+
+    int arr[]  ={10,15,20,25,30,35,40};
+
+        // access the elements of an array
+    printf("%d\n" ,arr[0]); // outputs -> 10
+
+        // change an array element
+    arr[1] = 16; // the index [1] in the array has now a value of 16 instead of 15
+
+        // loop through an array
+    for (int i = 0; i < 7; i++){
+        printf("%d\n", arr[i]);
+    }
+
+        // set array size
+            // also another common way to create arrays
+        int arrays[4];
+
+        arrays[0] = 11;
+        arrays[1] = 22;
+        arrays[2] = 33;
+        arrays[3] = 44;
+
+        // get array size or length
+
+        printf("%lu\n", sizeof(arrays)); // This will just print out the size of the array in bytes instead of the number of elements
+
+        // here's how you can get the size of an array based on its element
+
+        int length = sizeof(arrays) / sizeof(arrays[0]); 
+
+        printf("%d\n", length); // outputs -> 4
+
+        // also you can use it in a for loop substitute for .length
+        int grades [] = {95,99,100};
+        int size = sizeof(grades) / sizeof(grades[0]);
+
+        for (int i = 0; i < size; i++){
+            printf("%d\n", grades[i]);
+        }
+
+    // MULTI DIMENSIONAL ARRAYS
+
+        // [2] -> number of rows
+        // [3] -> number of columns
+    int matrix[2][3] = {{1,2,3},{3,4,5}};
+
+        // access the elements of a 2D array
+
+    printf("%d\n", matrix[0][2]); // outputs -> 3
+
+        // change elements in a 2D array
+    matrix[0][0] = 50;
+    
+
+        // Loop through a 2D array
+
+        for (int i = 0; i < 2; i++){
+            for (int j = 0; j < 3; j++){
+                printf("%d ", matrix[i][j]);
+            }
+            printf("\n");
+        }
+
+    // STRINGS 
+
     return 0;
 }
 
