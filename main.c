@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int main(){
     printf("Hello World Again\n\n");
@@ -50,7 +51,174 @@ int main(){
 
     // DATA TYPES
 
-    // -----------------------
+        // Data Types         Format Specifier       Memory Size
+
+            // int                %d or %i           2 or 4 bytes               
+            // float              %f or %F           4 bytes
+            // double               %lf              8 bytes
+            // char                 %c               1 byte
+            // String               %s    
+
+
+        // get the memory size
+
+        int myInt;
+        float myFloat;
+        double myDouble;
+        char myChar;
+
+        // note: must use the %lu format specifier to get the size
+
+        printf("The size of int is %lu bytes\n",sizeof(myInt));
+        printf("The size of float is %lu bytes\n",sizeof(myFloat));
+        printf("The size of double is %lu bytes\n",sizeof(myDouble));
+        printf("The size of char is %lu bytes\n",sizeof(myChar));
+
+
+        // type conversion
+
+            // two types of conversion in C
+                // * Implicit Conversion - Automatic
+                // * Explicit Conversion - Manually
+
+
+        // Implicit conversion sample
+        
+        float myFloat1 = 9;
+
+        printf("%f\n", myFloat1); // -> output: 9.000000
+
+        // Explicit conversion sample
+
+        float totalsum = (float) 5/2;
+        printf("%f\n", totalsum); // -> output: 2.500000
+
+            // note: you can use the (int) to convert the data type of the variable
+
+
+
+    // CONSTANTS
+
+        // constants are unchangeable and read-only
+
+    const int ranNum = 21;
+
+    printf("The age is %d\n", ranNum);
+
+    // OPERATORS
+
+     // C Divides the operators into the following groups:
+        
+        // Arithmetic Operators
+        // Assignment Operators
+        // Comparison Operators
+        // Logical Operators
+        // Bitwise Operators
+
+    // BOOLEANS
+
+        bool isStudent = true;  // true isStudent = true;
+        bool isStudying = false; // false isStudying = false;
+
+        printf("Are you a student: %d\n", isStudent); // -> output: Are you a student: 1
+        printf("Are you studying: %d\n", isStudying); // -> output: Are you studying: 0
+
+        // note: 1 -> true and 0 -> false
+
+
+    // CONDITIONAL STATEMENTS
+
+        // if statement, if else statement, if else if statement
+
+    int age = 21;
+
+        if (age >= 18){
+            printf("You are an adult\n");
+        } else if (age < 0) {
+            printf("Age invalid\n");
+        } else {
+            printf("You are not an adult\n");
+        }
+
+    // SWITCH STATEMENTS
+    int day = 4;
+
+        switch (day) {
+        case 1:
+            printf("Monday");
+            break;
+        case 2:
+            printf("Tuesday");
+            break;
+        case 3:
+            printf("Wednesday");
+            break;
+        case 4:
+            printf("Thursday");
+            break;
+        case 5:
+            printf("Friday");
+            break;
+        case 6:
+            printf("Saturday");
+            break;
+        case 7:
+            printf("Sunday");
+            break;
+        }
+
+    // WHILE-LOOP
+
+        // while loop
+    int i = 0;
+
+    while (i <= 5){
+        printf("%d\n", i);
+        i++;
+    }
+
+        // do/while loop
+
+    int ii = 0;
+
+    do {
+        printf("%d\n", ii);
+        ii++;
+    }
+    while (ii <= 5);
+
+        // print even numbers
+
+    int j = 0;
+
+    while (j <= 20){
+        printf("%d\n", j);
+        j += 2;
+    }
+
+        // print odd numbers
+
+    int k = 0;
+
+    while (k <= 20){
+        printf("%d\n", k);
+        k += 3;
+    }
+
+        // reverse a number
+
+    int numbers = 123456789;
+    int revnum = 0;
+
+    while (numbers){
+        revnum = revnum * 10 + numbers % 10;
+        numbers /= 10;
+    }
+
+    printf("%d", revnum);
+
+    // FOR LOOPS
+
     return 0;
 }
 
