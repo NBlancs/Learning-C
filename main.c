@@ -332,6 +332,94 @@ int main(){
 
         printf("%s\n", str1);
 
+    //USER INPUTS
+
+            // int inputNum;
+            // char inputChar;
+
+            // printf("Input Number here: ");
+
+            // scanf("%d", &inputNum);
+            // printf("Your number is %d\n\n", inputNum);
+
+            //     // multiple inputs
+
+            // printf("Input Number and Char here: ");
+            // scanf("%d %c", &inputNum, &inputChar);
+
+            // printf("Your number is %d\n", inputNum);
+
+            // printf("Your char is %c\n", inputChar);
+
+        // take string input
+
+    char inputfullName[30];
+
+            // printf("Input your fullname: ");
+
+            //     // use fgets() when working with strings instead of scanf()
+
+            // fgets(inputfullName, sizeof(inputfullName), stdin);
+
+            //     // note: use scanf() to get single world
+            //     // and fgets() for multiple words
+
+            // printf("Your full name is %s", inputfullName);
+
+    // Memory Address
+    int pointerNumber = 50;
+    printf("The memory address is located at %p\n\n", &pointerNumber);
+
+        //creating pointers
+
+    int memoryNumber = 777;
+
+    printf("%d\n", memoryNumber); // outputs -> 777 
+    printf("%p\n", &memoryNumber); // outputs -> 0061FDE0 
+
+        // pointer variable
+
+    int sourceNum = 10; // int variable
+    int* pointsToSourceNum = &sourceNum; // pointer variable, stores the address of sourceNum
+
+    printf("Memory address of source number is at %p\n", &pointsToSourceNum);
+
+        // dereference
+
+    printf("%d\n", *pointsToSourceNum);
+
+        // pointers and arrays
+
+    int randomNums [] = {2,3,5,6,7,1,2,3,4};
+    int length3 = sizeof(randomNums) / sizeof(randomNums[0]);
+
+    for (int i = 0; i < length3; i++){
+        printf("%p\n", &randomNums[i]); // loops out the memory address of each number in the array
+    }
+
+    printf("\n%p\n", randomNums); // outputs -> the same memory address as the first element in the array
+    printf("%d\n", *randomNums);// outputs -> 2
+
+        // to access the rest of the elements you can just increment the pointer
+
+    printf("%d\n", *(randomNums + 1)); // gets the second element
+    printf("%d\n", *(randomNums + 2)); // gets the third element
+
+        // you can also just loop through it
+
+    int *pointerToRandomNums = randomNums;
+
+    for (int i = 0; i < length3; i++){
+        printf("%d\n" , *(pointerToRandomNums + i));
+    }
+
+        // change the array value of elements with pointers
+
+    *randomNums = 10; // changes the first element to 10
+    *(randomNums + 1) = 15; // changes the second element to 17 
+
+    printf("%d\n", *randomNums);
+    printf("%d\n", *(randomNums + 1));
     return 0;
 }
 
